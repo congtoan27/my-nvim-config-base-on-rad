@@ -64,6 +64,21 @@ return {
 		map("n", "<F12>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
 		map("n", "<F8>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 		-- map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
+		map("n", "<leader>du", function()
+			require("dapui").toggle()
+		end, { noremap = true, silent = true, desc = "Toggle DAP UI" })
+
+		map({ "n", "v" }, "<leader>dw", function()
+			require("dapui").eval(nil, { enter = true })
+		end, { noremap = true, silent = true, desc = "Add word under cursor to Watches" })
+
+		map({ "n", "v" }, "Q", function()
+			require("dapui").eval()
+		end, {
+			noremap = true,
+			silent = true,
+			desc = "Hover/eval a single value (opens a tiny window instead of expanding the full object) ",
+		})
 		map("n", "<leader>dr", "<Cmd>lua require'dap'.repl.open()<CR>", opts)
 		map("n", "<leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", opts)
 		map(

@@ -17,5 +17,6 @@ require("servers.css_ls")(lspconfig, capabilities, on_attach)
 require("servers.css-var")(lspconfig, capabilities, on_attach)
 require("servers.marksman")(lspconfig, capabilities, on_attach)
 require("servers.eslint-lsp")(lspconfig, capabilities, on_attach)
+require("servers.asm_lsp")(lspconfig, capabilities, on_attach)
 
 -- Linters & Formatters

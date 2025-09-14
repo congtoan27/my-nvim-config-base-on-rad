@@ -4,12 +4,8 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			-- Conform will run multiple formatters sequentially
-			python = { "black" },
 			-- You can customize some of the format options for the filetype (:help conform.format)
 			-- Conform will run the first available formatter
-			go = { "gofumpt" },
-			c = { "clang-format" },
-			cpp = { "clang-format" },
 			sh = { "shfmt" },
 			json = { "fixjson" },
 			jsonc = { "fixjson" },
@@ -27,6 +23,8 @@ return {
 			cs = { "csharpier" },
 			sql = { "sqlfmt" },
 			yaml = { "yamlfmt" },
+			asm = { "wasm_language_tools" },
+			vmasm = { "wasm_language_tools" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()

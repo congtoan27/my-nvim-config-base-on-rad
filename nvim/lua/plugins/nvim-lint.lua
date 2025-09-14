@@ -9,10 +9,6 @@ return {
 		local lint = require("lint")
 		lint.linters_by_ft = {
 			lua = { "luacheck" },
-			python = { "flake8" },
-			go = { "revive" },
-			c = { "cpplint" },
-			cpp = { "cpplint" },
 			sh = { "shellcheck" },
 			docker = { "hadolint" },
 			solidity = { "solhint" },
@@ -29,6 +25,8 @@ return {
 			yaml = { "yamllint" },
 			sql = { "sqlfluff" },
 			markdown = { "markdownlint" },
+			asm = { "wasm_language_tools" },
+			vmasm = { "wasm_language_tools" },
 		}
 		-- Tự động lint khi save hoặc mở file
 		vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
