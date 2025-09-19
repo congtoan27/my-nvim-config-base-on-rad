@@ -37,6 +37,13 @@ return {
 		-- default configuration
 		--		dapui.setup()
 		-- more minimal ui
+		require("nvim-dap-virtual-text").setup({
+			enabled = true,
+			highlight_changed_variables = true,
+			show_stop_reason = true,
+			commented = false,
+		})
+
 		dapui.setup({
 			expand_lines = true,
 			controls = { enabled = true }, -- no extra play/step buttons
@@ -47,15 +54,15 @@ return {
 				max_value_lines = 200,
 			},
 			-- Only one layout: just the "scopes" (variables) list at the bottom
-			layouts = {
-				{
-					elements = {
-						{ id = "scopes", size = 1.0 }, -- 100% of this panel is scopes
-					},
-					size = 15, -- height in lines (adjust to taste)
-					position = "bottom", -- "left", "right", "top", "bottom"
-				},
-			},
+			-- layouts = {
+			-- 	{
+			-- 		elements = {
+			-- 			{ id = "scopes", size = 1.0 }, -- 100% of this panel is scopes
+			-- 		},
+			-- 		size = 15, -- height in lines (adjust to taste)
+			-- 		position = "bottom", -- "left", "right", "top", "bottom"
+			-- 	},
+			-- },
 		})
 	end,
 }

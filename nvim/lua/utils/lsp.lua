@@ -1,5 +1,5 @@
 local M = {}
-
+M.capabilities = require("cmp_nvim_lsp").default_capabilities()
 M.on_attach = function(client, bufnr)
 	local keymap = vim.keymap.set
 	local opts = {

@@ -33,6 +33,7 @@ return {
 				"vue",
 				"yaml",
 				"c_sharp",
+				"razor",
 			},
 			auto_install = true, -- auto-install any other parsers on opening new language files
 			sync_install = false,

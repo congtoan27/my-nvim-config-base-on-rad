@@ -15,8 +15,6 @@ return {
 		"hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for LSP-based completion
 	},
 	config = function()
-    --		require("utils.diagnostics").setup()
-		require("servers")
 		require("mason").setup({
 			registries = {
 				"github:mason-org/mason-registry",
