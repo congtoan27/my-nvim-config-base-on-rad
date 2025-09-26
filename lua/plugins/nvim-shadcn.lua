@@ -1,5 +1,5 @@
 return {
-	"BibekBhusal/nvim-shadcn",
+	"BibekBhusal0/nvim-shadcn",
 	opts = {},
 	cmd = { "ShadcnAdd" },
 	keys = {

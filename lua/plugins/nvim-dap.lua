@@ -28,9 +28,11 @@ return {
 				request = "launch",
 				program = function()
 					-- return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/src/", "file")
-					return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/net9.0/", "file")
+					-- return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/net9.0/", "file")
+					return require("dap-dll-autopicker").build_dll_path()
 				end,
 
+				console = "internalConsole",
 				-- justMyCode = false,
 				-- stopAtEntry = false,
 				-- -- program = function()

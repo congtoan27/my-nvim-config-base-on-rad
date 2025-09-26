@@ -10,8 +10,8 @@ return {
 	config = function()
 		require("ccc").setup({
 			highlighter = {
-				auto_enable = false, -- enable highlight automatically
-				lsp = true, -- highlight colors from LSP too
+				auto_enable = true, -- enable highlight automatically
+				lsp = false, -- highlight colors from LSP too
 			},
 			highlight_mode = "virtual", -- small circles with colour next to the declaration
 		})

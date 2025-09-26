@@ -48,6 +48,7 @@ local servers = {
 			"cshtml",
 		},
 	},
+	marksman = {},
 	tailwindcss = {},
 	html = {
 
@@ -75,6 +76,7 @@ local servers = {
 	wasm_language_tools = {},
 	postgres_lsp = {},
 	stylua = {},
+	eslint = {},
 	emmet_ls = {
 
 		filetypes = {
@@ -118,7 +120,7 @@ end
 -- autocmd
 local augroup = vim.api.nvim_create_augroup("RazorFormat", { clear = true })
 
-vim.api.nvim_create_autocmd({ "InsertLeave", "BufWritePre" }, {
+vim.api.nvim_create_autocmd({ "InsertLeave" }, {
 	group = augroup,
 	pattern = { "*.razor", "*.cshtml" },
 	callback = function(args)

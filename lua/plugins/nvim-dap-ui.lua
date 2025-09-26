@@ -5,7 +5,7 @@ return {
 		local dapui = require("dapui")
 		local dap = require("dap")
 		vim.fn.sign_define("DapBreakpoint", {
-			text = "⚪",
+			text = "🚨",
 			texthl = "DapBreakpointSymbol",
 			linehl = "DapBreakpoint",
 			numhl = "DapBreakpoint",
@@ -18,7 +18,7 @@ return {
 			numhl = "DapBreakpoint",
 		})
 		vim.fn.sign_define("DapBreakpointRejected", {
-			text = "⭕",
+			text = "🔵",
 			texthl = "DapStoppedSymbol",
 			linehl = "DapBreakpoint",
 			numhl = "DapBreakpoint",

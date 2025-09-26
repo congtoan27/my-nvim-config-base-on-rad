@@ -7,21 +7,21 @@
 
 return {
 	"folke/trouble.nvim",
-	opts = {
-		config = function()
-			require("trouble").setup({
-				modes = {
-					diagnostics = {
-						filter = function(items)
-							return vim.tbl_filter(function(item)
-								return not string.match(item.basename, [[%__virtual.cs$]])
-							end, items)
-						end,
-					},
+	opts = {}, -- for default options, refer to the configuration section for custom setup.
+	config = function()
+		require("trouble").setup({
+			modes = {
+				diagnostics = {
+					filter = function(items)
+						return vim.tbl_filter(function(item)
+							return not string.match(item.basename, [[%__virtual.cs$]])
+						end, items)
+					end,
 				},
-			})
-		end,
-	}, -- for default options, refer to the configuration section for custom setup.
+			},
+		})
+	end,
+
 	cmd = "Trouble",
 	lazy = true,
 	keys = {

@@ -24,6 +24,7 @@ return {
 		"hrsh7th/cmp-buffer", -- nvim-cmp source for words from the current buffer
 		"hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths
 		"hrsh7th/cmp-nvim-lsp-signature-help", -- function signatures
+		"tailwind-tools",
 	},
 	config = function()
 		local lspkind = require("lspkind")
@@ -67,9 +68,17 @@ return {
 				{ name = "codeium" },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
+				{ name = "ts_ls" },
+				{ name = "roslyn" },
+
+				{ name = "yamlls" },
+				{ name = "jsonls" },
+				{ name = "cssls" },
+				{ name = "html" },
 				{ name = "buffer" },
 				{ name = "path" },
 				{ name = "nvim_lsp_signature_help" },
+				{ name = "render_markdown" },
 			},
 		})
 	end,
