@@ -9,6 +9,7 @@ vim.lsp.config("*", {
 	capabilities = lsp_utils.capabilities,
 })
 local servers = {
+	hyprls = {},
 	lua_ls = {
 		settings = {
 			Lua = {

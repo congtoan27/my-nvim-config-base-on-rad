@@ -20,7 +20,6 @@ return {
 
 		dap.adapters.netcoredbg = netcoredbg_adapter -- needed for normal debugging
 		dap.adapters.coreclr = netcoredbg_adapter -- needed for unit test debugging
-
 		dap.configurations.cs = {
 			{
 				type = "coreclr",
@@ -32,7 +31,6 @@ return {
 					return require("dap-dll-autopicker").build_dll_path()
 				end,
 
-				console = "internalConsole",
 				-- justMyCode = false,
 				-- stopAtEntry = false,
 				-- -- program = function()
@@ -64,8 +62,8 @@ return {
 		map("n", "<F6>", "<Cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>", opts)
 		map("n", "<F9>", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
 		map("n", "<F10>", "<Cmd>lua require'dap'.step_over()<CR>", opts)
-		map("n", "<F12>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
-		map("n", "<F8>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
+		map("n", "<F8>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
+		map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 		-- map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 		map("n", "<leader>du", function()
 			require("dapui").toggle()

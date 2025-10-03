@@ -26,6 +26,7 @@ return {
 			vmasm = { "wasm_language_tools" },
 			xml = { "xmlformat" },
 			razor = { "csharpier" },
+			markdown = { "prettierd" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()
