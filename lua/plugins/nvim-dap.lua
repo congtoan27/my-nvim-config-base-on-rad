@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"rcarriga/nvim-dap-ui", -- giao diện đẹp cho dap
 		"theHamsta/nvim-dap-virtual-text",
+		"nvim-neotest/nvim-nio",
 		event = "VeryLazy",
 
 		"nvim-neotest/nvim-nio", -- cần cho dap-ui
