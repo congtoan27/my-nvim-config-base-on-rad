@@ -11,10 +11,10 @@ return {
 	config = function()
 		require("neotest").setup({
 			adapters = {
-				require("neotest-dotnet")({
-					-- bạn có thể thêm config cho netcoredbg ở đây
-					-- dap = { justMyCode = false }
-				}),
+				-- require("neotest-dotnet")({
+				-- 	-- bạn có thể thêm config cho netcoredbg ở đây
+				-- 	-- dap = { justMyCode = false }
+				-- }),
 			},
 		})
 	end,
