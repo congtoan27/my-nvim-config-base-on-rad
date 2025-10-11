@@ -24,7 +24,7 @@ return {
 					suffix = "",
 				},
 				-- Inlined with 'image' elements.
-				-- image = "󰥶 ",
+				image = "󰥶 ",
 				-- Inlined with 'email_autolink' elements.
 				email = "󰀓 ",
 				-- Fallback icon for 'inline_link' and 'uri_autolink' elements.

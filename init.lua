@@ -98,6 +98,7 @@ local servers = {
 			"vue",
 			"razor",
 			"cshtml",
+			"md",
 		},
 	},
 }

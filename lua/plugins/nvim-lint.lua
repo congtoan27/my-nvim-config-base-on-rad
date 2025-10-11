@@ -25,6 +25,7 @@ return {
 			sql = { "postgrestools" },
 			asm = { "wasm_language_tools" },
 			vmasm = { "wasm_language_tools" },
+			markdown = { "markdownlint" },
 		}
 		-- Tự động lint khi save hoặc mở file
 		vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
