@@ -2,7 +2,19 @@
 -- TITLE : NeoVim options
 -- ABOUT : basic settings native to neovim
 -- ================================================================================================
-
+local function set_terminal_colorscheme(name)
+	vim.loop.spawn("kitty", {
+		args = {
+			"@",
+			"--to",
+			vim.env.KITTY_LISTEN_ON,
+			"set-colors",
+			-- '-a', -- update for all windows
+			-- '-c', -- update for new windows
+			string.format("~/.config/kitty/base16-kitty/colors/base16-%s.conf", name), -- path to kitty colorscheme
+		},
+	}, nil)
+end
 -- Basic Settings
 vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
@@ -69,6 +81,7 @@ if vim.fn.isdirectory(undodir_path) == 0 then
 	vim.fn.mkdir(undodir_path, "p") -- Create if not exists
 end
 
+vim.opt.termguicolors = true
 -- Behavior Settings
 vim.opt.errorbells = false -- Disable error sounds
 vim.opt.backspace = "indent,eol,start" -- Make backspace behave naturally
@@ -102,3 +115,5 @@ vim.opt.foldlevel = 99 -- Keep all folds open by default
 -- Split Behavior
 vim.opt.splitbelow = true -- Horizontal splits open below
 vim.opt.splitright = true -- Vertical splits open to the right
+
+vim.o.background = "dark" -- or "light" for light mode

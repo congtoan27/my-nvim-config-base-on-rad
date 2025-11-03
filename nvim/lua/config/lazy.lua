@@ -43,6 +43,6 @@ require("lazy").setup({
 			"netrwPlugin",
 		},
 	},
-	install = { colorscheme = { "gruvbox" } },
+	install = {},
 	checker = { enabled = true },
 })

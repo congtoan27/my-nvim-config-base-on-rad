@@ -1,8 +1,5 @@
 require("config.lazy")
-
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
-
 local lsp_utils = require("utils.lsp")
 vim.lsp.config("*", {
 	on_attach = lsp_utils.on_attach,
@@ -30,15 +27,11 @@ local servers = {
 	css_variables = {
 
 		filetypes = {
-			"astro",
 			"css",
-			"eruby",
 			"html",
 			"htmlangular",
-			"htmldjango",
 			"javascriptreact",
 			"less",
-			"pug",
 			"sass",
 			"scss",
 			"svelte",
@@ -50,16 +43,13 @@ local servers = {
 		},
 	},
 	marksman = {},
-	tailwindcss = {},
+	tailwindccongss = {},
 	html = {
 
 		filetypes = {
-			"astro",
 			"css",
-			"eruby",
 			"html",
 			"htmlangular",
-			"htmldjango",
 			"javascriptreact",
 			"less",
 			"pug",
@@ -81,9 +71,7 @@ local servers = {
 	emmet_ls = {
 
 		filetypes = {
-			"astro",
 			"css",
-			"eruby",
 			"html",
 			"htmlangular",
 			"htmldjango",

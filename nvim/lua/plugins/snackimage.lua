@@ -2,6 +2,7 @@
 return {
 	"folke/snacks.nvim",
 	---@type snacks.Config
+	config = function() end,
 	opts = {
 		image = {
 			-- your image configuration comes here

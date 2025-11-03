@@ -24,7 +24,6 @@ return {
 		"hrsh7th/cmp-buffer", -- nvim-cmp source for words from the current buffer
 		"hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths
 		"hrsh7th/cmp-nvim-lsp-signature-help", -- function signatures
-		"tailwind-tools",
 	},
 	config = function()
 		local lspkind = require("lspkind")
@@ -42,7 +41,7 @@ return {
 
 			formatting = {
 				format = lspkind.cmp_format({
-					before = require("tailwind-tools.cmp").lspkind_format,
+					-- before = require("tailwind-tools.cmp").lspkind_format,
 					mode = "symbol_text",
 					menu = {
 						codeium = "",

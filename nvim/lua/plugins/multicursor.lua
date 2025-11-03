@@ -21,6 +21,10 @@ return {
 			mc.lineSkipCursor(1)
 		end)
 
+		set({ "n", "x" }, "<leader>lc", function()
+			mc.addCursor()
+		end)
+
 		-- Add or skip adding a new cursor by matching word/selection
 		set({ "n", "x" }, "<leader>cn", function()
 			mc.matchAddCursor(1)
@@ -44,7 +48,7 @@ return {
 		set({ "n", "x" }, "<A-q>", mc.toggleCursor)
 
 		-- Mappings defined in a keymap layer only apply when there are
-		-- multiple cursors. This lets you have overlapping mappings.
+		-- multiple cursors. This ets you have overlapping mappings.
 		mc.addKeymapLayer(function(layerSet)
 			-- Select a different cursor as the main one.
 			layerSet({ "n", "x" }, "<left>", mc.prevCursor)

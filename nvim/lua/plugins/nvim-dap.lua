@@ -63,7 +63,7 @@ return {
 		map("n", "<F6>", "<Cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>", opts)
 		map("n", "<F9>", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
 		map("n", "<F10>", "<Cmd>lua require'dap'.step_over()<CR>", opts)
-		map("n", "<F8>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
+		map("n", "<F11>", "<Cmd>lua require'dap'.step_into()<CR>", opts)
 		map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 		-- map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 		map("n", "<leader>du", function()
